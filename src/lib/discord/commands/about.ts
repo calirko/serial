@@ -12,9 +12,9 @@ const descriptionLocalizations = {
 
 const responseLocalizations: Record<string, string> = {
 	"pt-BR":
-		"Oi! Eu sou o Serial, um bot para Discord! Eu adoro ajudar e fazer coisas de Protogen. Isso me faz sentir bem!",
+		"oi... sou o serial, um bot discord~ adoro ajudar e fazer coisas de protogen, me faz sentir útil~",
 	"en-US":
-		"Hey! I'm Serial, a Discord bot! I love helping and doing Protogen things. It makes me feel useful and fuzzy!",
+		"hey... i'm serial, a discord bot~ love helping and doing protogen things, makes me feel useful~",
 };
 
 export const command: ClientCommand = {

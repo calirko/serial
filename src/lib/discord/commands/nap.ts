@@ -11,8 +11,8 @@ const descriptionLocalizations = {
 };
 
 const responseLocalizations: Record<string, string> = {
-	"pt-BR": "*se enrola em uma bolinha e fecha os olhos* ZzZ... *ronrona baixinho* Boa noite~ (˘▾˘)~♪",
-	"en-US": "*curls up in a ball and closes eyes* ZzZ... *soft purring* Good night~ (˘▾˘)~♪",
+	"pt-BR": "*se enrola e fecha os olhos* zzz... *ronrona baixinho* boa noite~ (˘▾˘)~♪",
+	"en-US": "*curls up and closes eyes* zzz... *soft purrs* night~ (˘▾˘)~♪",
 };
 
 export const command: ClientCommand = {

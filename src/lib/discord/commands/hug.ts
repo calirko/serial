@@ -11,8 +11,8 @@ const descriptionLocalizations = {
 };
 
 const responseLocalizations: Record<string, string> = {
-	"pt-BR": "*te dá um abraço bem apertadinho* Aww~ Você precisa de um abraço! (っ◔◡◔)っ ❤️",
-	"en-US": "*gives you a warm, tight hug* Aww~ You need a hug! (っ◔◡◔)っ ❤️",
+	"pt-BR": "*te abraça apertadinho* aww... precisa de um abraço~ (っ◔◡◔)っ ❤️",
+	"en-US": "*hugs you tight* aww... need a hug~ (っ◔◡◔)っ ❤️",
 };
 
 export const command: ClientCommand = {

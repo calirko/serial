@@ -11,8 +11,8 @@ const descriptionLocalizations = {
 };
 
 const responseLocalizations: Record<string, string> = {
-	"pt-BR": "*ronrona e se encosta na sua mão* Mmm~ Cafuné! Mais um pouquinho? (˶ᵔ ᵕ ᵔ˶)",
-	"en-US": "*purrs and leans into your hand* Mmm~ Head pats! A little more? (˶ᵔ ᵕ ᵔ˶)",
+	"pt-BR": "*ronrona e encosta na sua mão* mmm~ cafuné... mais? (˶ᵔ ᵕ ᵔ˶)",
+	"en-US": "*purrs and leans in* mmm~ head pats... more? (˶ᵔ ᵕ ᵔ˶)",
 };
 
 export const command: ClientCommand = {

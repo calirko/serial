@@ -20,7 +20,7 @@ export const event: ClientEvent = {
 	name: "ready",
 	execute: async (client: Client) => {
 		console.log("Serial is online!");
-		client.user?.setActivity("Cute furries in their servers...", {
+		client.user?.setActivity("over servers... miau~", {
 			type: ActivityType.Watching,
 		});
 

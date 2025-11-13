@@ -47,6 +47,21 @@ model guild {
    automod  Json? // Store automod rules, filters, actions
    logging  Json? // Store logging channels and events to log
    commands Json? // Store custom commands
+   leveling Json? // Store leveling system settings
 
    settings Json? // Store general preferences
+}
+
+model member {
+   id        String   @id @default(cuid()) @map("_id")
+   userId    String   // Discord user ID
+   guildId   String   // Discord guild ID
+   xp        Int      @default(0)
+   level     Int      @default(0)
+   messages  Int      @default(0)
+   lastXpAt  DateTime @default(now())
+   createdAt DateTime @default(now())
+   updatedAt DateTime @updatedAt
+
+   @@unique([userId, guildId])
 }
