@@ -47,66 +47,66 @@ export const command: ClientCommand = {
 
 		const embed = new EmbedBuilder()
 			.setColor("#5865F2")
-			.setTitle(`Server Information - ${guild.name}`)
+			.setTitle(`${guild.name}`)
 			.setThumbnail(guild.iconURL({ size: 256 }))
 			.addFields(
 				{
-					name: "🆔 Server ID",
+					name: "🆔 id",
 					value: `\`${guild.id}\``,
 					inline: true,
 				},
 				{
-					name: "👑 Owner",
+					name: "👑 owner",
 					value: `${owner.user.tag}`,
 					inline: true,
 				},
 				{
-					name: "📅 Created",
-					value: `<t:${Math.floor(guild.createdTimestamp / 1000)}:F>`,
+					name: "📅 created",
+					value: `<t:${Math.floor(guild.createdTimestamp / 1000)}:R>`,
 					inline: true,
 				},
 				{
-					name: "👥 Members",
+					name: "👥 members",
 					value: guild.memberCount.toString(),
 					inline: true,
 				},
 				{
-					name: "🔒 Verification Level",
+					name: "🔒 verification",
 					value: verificationLevels[guild.verificationLevel],
 					inline: true,
 				},
 				{
-					name: "💎 Boost Level",
-					value: `Level ${guild.premiumTier} (${boosts} boosts)`,
+					name: "💎 boost",
+					value: `lvl ${guild.premiumTier} (${boosts} boosts)`,
 					inline: true,
 				},
 				{
-					name: "📝 Text Channels",
+					name: "📝 text",
 					value: textChannels.toString(),
 					inline: true,
 				},
 				{
-					name: "🔊 Voice Channels",
+					name: "🔊 voice",
 					value: voiceChannels.toString(),
 					inline: true,
 				},
 				{
-					name: "📁 Categories",
+					name: "📁 categories",
 					value: categories.toString(),
 					inline: true,
 				},
 				{
-					name: "🏷️ Roles",
+					name: "🏷️ roles",
 					value: roles.toString(),
 					inline: true,
 				},
 				{
-					name: "😀 Emojis",
+					name: "😀 emojis",
 					value: emojis.toString(),
 					inline: true,
 				},
 				{
-					name: "🎨 Stickers",
+					name: "🎨 stickers",
 					value: stickers.toString(),
 					inline: true,
 				}
@@ -114,7 +114,7 @@ export const command: ClientCommand = {
 
 		if (guild.description) {
 			embed.addFields({
-				name: "📖 Description",
+				name: "📖 description",
 				value: guild.description,
 				inline: false,
 			});
@@ -128,7 +128,7 @@ export const command: ClientCommand = {
 		}
 
 		embed.setFooter({
-			text: `Requested by ${interaction.user.tag}`,
+			text: `requested by ${interaction.user.tag}`,
 			iconURL: interaction.user.displayAvatarURL(),
 		});
 

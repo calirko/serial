@@ -36,32 +36,32 @@ export const command: ClientCommand = {
 
 		const embed = new EmbedBuilder()
 			.setColor("#5865F2")
-			.setTitle(`User Information - ${targetUser.tag}`)
+			.setTitle(`${targetUser.tag}`)
 			.setThumbnail(targetUser.displayAvatarURL({ size: 256 }))
 			.addFields(
 				{
-					name: "👤 Username",
+					name: "👤 username",
 					value: targetUser.username,
 					inline: true,
 				},
 				{
-					name: "🏷️ Display Name",
+					name: "🏷️ display",
 					value: targetUser.displayName || targetUser.username,
 					inline: true,
 				},
 				{
-					name: "🆔 User ID",
+					name: "🆔 id",
 					value: `\`${targetUser.id}\``,
 					inline: true,
 				},
 				{
-					name: "📅 Account Created",
-					value: `<t:${Math.floor(targetUser.createdTimestamp / 1000)}:F>`,
+					name: "📅 created",
+					value: `<t:${Math.floor(targetUser.createdTimestamp / 1000)}:R>`,
 					inline: true,
 				},
 				{
-					name: "🤖 Bot",
-					value: targetUser.bot ? "Yes" : "No",
+					name: "🤖 bot",
+					value: targetUser.bot ? "yes" : "no",
 					inline: true,
 				}
 			);
@@ -69,35 +69,35 @@ export const command: ClientCommand = {
 		if (member) {
 			embed.addFields(
 				{
-					name: "📅 Joined Server",
+					name: "📅 joined",
 					value: member.joinedTimestamp 
-						? `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`
-						: "Unknown",
+						? `<t:${Math.floor(member.joinedTimestamp / 1000)}:R>`
+						: "unknown",
 					inline: true,
 				},
 				{
-					name: "🎨 Nickname",
-					value: member.nickname || "None",
+					name: "🎨 nickname",
+					value: member.nickname || "none",
 					inline: true,
 				},
 				{
-					name: "🏆 Highest Role",
+					name: "🏆 top role",
 					value: member.roles.highest.name,
 					inline: true,
 				},
 				{
-					name: "👥 Roles",
+					name: "👥 roles",
 					value: member.roles.cache.size > 1 
 						? `${member.roles.cache.size - 1} roles`
-						: "No roles",
+						: "no roles",
 					inline: true,
 				}
 			);
 
 			if (member.premiumSince) {
 				embed.addFields({
-					name: "💎 Boosting Since",
-					value: `<t:${Math.floor(member.premiumSince.getTime() / 1000)}:F>`,
+					name: "💎 boosting since",
+					value: `<t:${Math.floor(member.premiumSince.getTime() / 1000)}:R>`,
 					inline: true,
 				});
 			}
