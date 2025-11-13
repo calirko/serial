@@ -35,16 +35,10 @@ export const command: ClientCommand = {
 		const wordReversed = randomText.split(' ').reverse().join(' ');
 		
 		const responseText = local === "pt-BR" 
-			? `**Inversor de Texto**\n\n` +
-			  `**Original:** ${randomText}\n` +
-			  `**Caracteres invertidos:** ${reversedText}\n` +
-			  `**Palavras invertidas:** ${wordReversed}\n\n` +
-			  `Dois tipos de inversao para sua diversao!`
-			: `**Text Reverser**\n\n` +
-			  `**Original:** ${randomText}\n` +
-			  `**Characters reversed:** ${reversedText}\n` +
-			  `**Words reversed:** ${wordReversed}\n\n` +
-			  `Two types of reversal for your fun!`;
+			? `🔄 **original:** ${randomText}\n` +
+			  `**invertido:** ${reversedText}`
+			: `🔄 **original:** ${randomText}\n` +
+			  `**reversed:** ${reversedText}`;
 		
 		await interaction.reply(responseText);
 	},

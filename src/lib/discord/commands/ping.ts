@@ -49,13 +49,13 @@ export const command: ClientCommand = {
 		}
 		
 		const responseText = local === "pt-BR" 
-			? `🏓 **Pong!** Miau miau~\n\n` +
-			  `📡 **Discord API:** \`${discordPing}ms\`\n` +
+			? `🏓 pong! miau~\n\n` +
+			  `📡 **Discord:** \`${discordPing}ms\`\n` +
 			  `🗄️ **Database:** \`${dbPing}\`\n` +
 			  `📦 **Redis:** \`${redisPing}\`\n` +
 			  `⏱️ **Total:** \`${Date.now() - startTime}ms\``
-			: `🏓 **Pong!** Meow meow~\n\n` +
-			  `📡 **Discord API:** \`${discordPing}ms\`\n` +
+			: `🏓 pong! meow~\n\n` +
+			  `📡 **Discord:** \`${discordPing}ms\`\n` +
 			  `🗄️ **Database:** \`${dbPing}\`\n` +
 			  `📦 **Redis:** \`${redisPing}\`\n` +
 			  `⏱️ **Total:** \`${Date.now() - startTime}ms\``;

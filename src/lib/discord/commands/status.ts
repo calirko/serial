@@ -1,5 +1,5 @@
 import type { ClientCommand } from "../types";
-import os from "os";
+import * as os from "os";
 
 const nameLocalizations = {
 	"pt-BR": "status",
@@ -44,26 +44,22 @@ export const command: ClientCommand = {
 		};
 		
 		const responseText = local === "pt-BR" 
-			? `🤖 **Status do Sistema** Nyaa~\n\n` +
-			  `**💻 Sistema:**\n` +
-			  `• Plataforma: \`${platform} ${arch}\`\n` +
-			  `• CPUs: \`${cpuCount} cores\`\n` +
-			  `• RAM: \`${(usedMemory / 1024 / 1024 / 1024).toFixed(1)}GB / ${(totalMemory / 1024 / 1024 / 1024).toFixed(1)}GB (${memoryUsage}%)\`\n` +
-			  `• Uptime: \`${formatUptime(uptime)}\`\n\n` +
-			  `**🐱 Bot:**\n` +
-			  `• Memória: \`${(processMemory.heapUsed / 1024 / 1024).toFixed(1)}MB\`\n` +
-			  `• Uptime: \`${formatUptime(processUptime)}\`\n` +
-			  `• Node.js: \`${process.version}\``
-			: `🤖 **System Status** Meow~\n\n` +
-			  `**💻 System:**\n` +
-			  `• Platform: \`${platform} ${arch}\`\n` +
-			  `• CPUs: \`${cpuCount} cores\`\n` +
-			  `• RAM: \`${(usedMemory / 1024 / 1024 / 1024).toFixed(1)}GB / ${(totalMemory / 1024 / 1024 / 1024).toFixed(1)}GB (${memoryUsage}%)\`\n` +
-			  `• Uptime: \`${formatUptime(uptime)}\`\n\n` +
-			  `**🐱 Bot:**\n` +
-			  `• Memory: \`${(processMemory.heapUsed / 1024 / 1024).toFixed(1)}MB\`\n` +
-			  `• Uptime: \`${formatUptime(processUptime)}\`\n` +
-			  `• Node.js: \`${process.version}\``;
+			? `🤖 **sistema:**\n` +
+			  `plataforma: \`${platform} ${arch}\`\n` +
+			  `cpus: \`${cpuCount} cores\`\n` +
+			  `ram: \`${(usedMemory / 1024 / 1024 / 1024).toFixed(1)}/${(totalMemory / 1024 / 1024 / 1024).toFixed(1)}GB (${memoryUsage}%)\`\n\n` +
+			  `**🐱 bot:**\n` +
+			  `memória: \`${(processMemory.heapUsed / 1024 / 1024).toFixed(1)}MB\`\n` +
+			  `uptime: \`${formatUptime(processUptime)}\`\n` +
+			  `node.js: \`${process.version}\``
+			: `🤖 **system:**\n` +
+			  `platform: \`${platform} ${arch}\`\n` +
+			  `cpus: \`${cpuCount} cores\`\n` +
+			  `ram: \`${(usedMemory / 1024 / 1024 / 1024).toFixed(1)}/${(totalMemory / 1024 / 1024 / 1024).toFixed(1)}GB (${memoryUsage}%)\`\n\n` +
+			  `**🐱 bot:**\n` +
+			  `memory: \`${(processMemory.heapUsed / 1024 / 1024).toFixed(1)}MB\`\n` +
+			  `uptime: \`${formatUptime(processUptime)}\`\n` +
+			  `node.js: \`${process.version}\``;
 		
 		await interaction.reply(responseText);
 	},

@@ -1,7 +1,7 @@
 <script>
    import Guilds from "$lib/components/popover/guilds.svelte";
    import { Button } from "$lib/components/ui/button";
-   import { AlarmClock, ChevronDown, House } from "@lucide/svelte";
+   import { AlarmClock, ChevronDown, House, TrendingUp } from "@lucide/svelte";
    import UserDropdown from "./userDropdown.svelte";
 
    const sidebarItems = [
@@ -19,6 +19,12 @@
          name: "Portaria",
          children: [
             { name: "Entrada/Saída", icon: AlarmClock, href: "join-leave" },
+         ],
+      },
+      {
+         name: "Engajamento",
+         children: [
+            { name: "Sistema de Níveis", icon: TrendingUp, href: "leveling" },
          ],
       },
    ];

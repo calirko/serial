@@ -28,14 +28,10 @@ export const command: ClientCommand = {
 		const startTime = new Date(Date.now() - uptimeSeconds * 1000);
 		
 		const responseText = local === "pt-BR" 
-			? `⏰ **Tempo Online** Miau~\n\n` +
-			  `🕐 **Uptime:** \`${days}d ${hours}h ${minutes}m ${seconds}s\`\n` +
-			  `🚀 **Iniciado em:** <t:${Math.floor(startTime.getTime() / 1000)}:F>\n` +
-			  `💖 *Estou funcionando direitinho! Nyaa~*`
-			: `⏰ **Online Time** Meow~\n\n` +
-			  `🕐 **Uptime:** \`${days}d ${hours}h ${minutes}m ${seconds}s\`\n` +
-			  `🚀 **Started at:** <t:${Math.floor(startTime.getTime() / 1000)}:F>\n` +
-			  `💖 *I'm running smoothly! Nyaa~*`;
+			? `⏰ online há \`${days}d ${hours}h ${minutes}m ${seconds}s\`\n` +
+			  `iniciado <t:${Math.floor(startTime.getTime() / 1000)}:R>`
+			: `⏰ online for \`${days}d ${hours}h ${minutes}m ${seconds}s\`\n` +
+			  `started <t:${Math.floor(startTime.getTime() / 1000)}:R>`;
 		
 		await interaction.reply(responseText);
 	},

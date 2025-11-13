@@ -24,6 +24,10 @@ import { command as banner } from "./banner";
 import { command as roles } from "./roles";
 import { command as membercount } from "./membercount";
 import { command as channelinfo } from "./channelinfo";
+import { command as lock } from "./lock";
+import { command as unlock } from "./unlock";
+import { command as level } from "./level";
+import { command as leaderboard } from "./leaderboard";
 import type { ClientCommand } from "../types";
 
 export const commands: ClientCommand[] = [
@@ -31,6 +35,10 @@ export const commands: ClientCommand[] = [
 	ping, status, uptime,
 	// Utility commands
 	userinfo, serverinfo, avatar, banner, roles, membercount, channelinfo,
+	// Moderation commands
+	lock, unlock,
+	// Leveling commands
+	level, leaderboard,
 	// Interaction commands
 	cute, about, meow, purr, hug, boop, pat, nap, uwu,
 	// Fun commands

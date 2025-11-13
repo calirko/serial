@@ -34,15 +34,15 @@ export const command: ClientCommand = {
 		// Compatibility messages
 		const getCompatibilityMessage = (percent: number, locale: string) => {
 			if (percent >= 90) {
-				return locale === "pt-BR" ? "Perfeito! Almas gemeas!" : "Perfect! Soulmates!";
+				return locale === "pt-BR" ? "perfeito... almas gêmeas~" : "perfect... soulmates~";
 			} else if (percent >= 75) {
-				return locale === "pt-BR" ? "Muito compativel! Grande potencial!" : "Very compatible! Great potential!";
+				return locale === "pt-BR" ? "muito compatível!" : "very compatible!";
 			} else if (percent >= 50) {
-				return locale === "pt-BR" ? "Boa compatibilidade!" : "Good compatibility!";
+				return locale === "pt-BR" ? "boa compatibilidade~" : "good compatibility~";
 			} else if (percent >= 25) {
-				return locale === "pt-BR" ? "Hmm... talvez como amigos?" : "Hmm... maybe as friends?";
+				return locale === "pt-BR" ? "hm... talvez como amigos?" : "hmm... maybe as friends?";
 			} else {
-				return locale === "pt-BR" ? "Melhor manter distancia..." : "Better keep some distance...";
+				return locale === "pt-BR" ? "melhor manter distância..." : "better keep distance...";
 			}
 		};
 		
@@ -56,15 +56,13 @@ export const command: ClientCommand = {
 		const compatMessage = getCompatibilityMessage(compatibility, local ?? "en-US");
 		
 		const responseText = local === "pt-BR" 
-			? `**Ship: ${user1.username} x ${user2.username}**\n\n` +
-			  `Nome do ship: **${shipName}**\n` +
-			  `Compatibilidade: **${compatibility}%**\n` +
-			  `${createBar(compatibility)}\n\n` +
+			? `💕 **${user1.username} x ${user2.username}**\n` +
+			  `ship: **${shipName}**\n` +
+			  `**${compatibility}%** ${createBar(compatibility)}\n` +
 			  `${compatMessage}`
-			: `**Ship: ${user1.username} x ${user2.username}**\n\n` +
-			  `Ship name: **${shipName}**\n` +
-			  `Compatibility: **${compatibility}%**\n` +
-			  `${createBar(compatibility)}\n\n` +
+			: `💕 **${user1.username} x ${user2.username}**\n` +
+			  `ship: **${shipName}**\n` +
+			  `**${compatibility}%** ${createBar(compatibility)}\n` +
 			  `${compatMessage}`;
 		
 		await interaction.reply(responseText);

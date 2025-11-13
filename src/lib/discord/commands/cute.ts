@@ -12,8 +12,8 @@ const descriptionLocalizations = {
 
 const responseLocalizations: Record<string, string> = {
 	"pt-BR":
-		"Ei! Eu não sou fofo! Eu sou um bot poderoso! Uh... quero dizer, protogen!",
-	"en-US": "Hey! I'm not cute! I'm a powerful bot! Uh... I mean, protogen!",
+		"eh... não sou fofo não, viu? sou um protogen sério... >w<",
+	"en-US": "hm... 'm not cute, okay? i'm a serious protogen... >w<",
 };
 
 export const command: ClientCommand = {

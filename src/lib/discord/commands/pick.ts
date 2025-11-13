@@ -37,14 +37,8 @@ export const command: ClientCommand = {
 		).join('\n');
 		
 		const responseText = local === "pt-BR" 
-			? `**Escolhedor Aleatorio**\n\n` +
-			  `**Opcoes:**\n${optionsDisplay}\n\n` +
-			  `**Resultado:** ${randomChoice}\n\n` +
-			  `Deixe a sorte decidir!`
-			: `**Random Picker**\n\n` +
-			  `**Options:**\n${optionsDisplay}\n\n` +
-			  `**Result:** ${randomChoice}\n\n` +
-			  `Let luck decide!`;
+			? `🎯 escolhi... **${randomChoice}**~`
+			: `🎯 i picked... **${randomChoice}**~`;
 		
 		await interaction.reply(responseText);
 	},
