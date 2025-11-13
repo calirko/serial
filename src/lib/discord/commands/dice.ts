@@ -45,16 +45,12 @@ export const command: ClientCommand = {
 		const rollsText = rolls.join(' + ');
 		
 		const responseText = local === "pt-BR" 
-			? `**Rolagem de Dados**\n\n` +
-			  `**Configuracao:** ${numDice}d${diceType}\n` +
-			  `**Resultados:** ${diceDisplay}\n` +
-			  `**Calculo:** ${rollsText} = **${total}**\n\n` +
-			  `Boa sorte com seus resultados!`
-			: `**Dice Roll**\n\n` +
-			  `**Configuration:** ${numDice}d${diceType}\n` +
-			  `**Results:** ${diceDisplay}\n` +
-			  `**Calculation:** ${rollsText} = **${total}**\n\n` +
-			  `Good luck with your results!`;
+			? `🎲 ${numDice}d${diceType}\n` +
+			  `${diceDisplay}\n` +
+			  `${rollsText} = **${total}**`
+			: `🎲 ${numDice}d${diceType}\n` +
+			  `${diceDisplay}\n` +
+			  `${rollsText} = **${total}**`;
 		
 		await interaction.reply(responseText);
 	},

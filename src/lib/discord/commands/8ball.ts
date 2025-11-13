@@ -84,14 +84,8 @@ export const command: ClientCommand = {
 		const randomResponse = categoryResponses[Math.floor(Math.random() * categoryResponses.length)];
 		
 		const responseText = local === "pt-BR" 
-			? `**Bola Magica 8**\n\n` +
-			  `*A bola magica sussurra...*\n\n` +
-			  `**"${randomResponse}"**\n\n` +
-			  `*balanca misteriosamente*`
-			: `**Magic 8-Ball**\n\n` +
-			  `*The magic ball whispers...*\n\n` +
-			  `**"${randomResponse}"**\n\n` +
-			  `*shakes mysteriously*`;
+			? `🎱 *a bola sussurra...*\n**"${randomResponse}"**\n*balança~*`
+			: `🎱 *the ball whispers...*\n**"${randomResponse}"**\n*shakes~*`;
 		
 		await interaction.reply(responseText);
 	},
