@@ -17,11 +17,20 @@ import { command as pick } from "./pick";
 import { command as eightball } from "./8ball";
 import { command as reverse } from "./reverse";
 import { command as dice } from "./dice";
+import { command as userinfo } from "./userinfo";
+import { command as serverinfo } from "./serverinfo";
+import { command as avatar } from "./avatar";
+import { command as banner } from "./banner";
+import { command as roles } from "./roles";
+import { command as membercount } from "./membercount";
+import { command as channelinfo } from "./channelinfo";
 import type { ClientCommand } from "../types";
 
 export const commands: ClientCommand[] = [
 	// System commands
 	ping, status, uptime,
+	// Utility commands
+	userinfo, serverinfo, avatar, banner, roles, membercount, channelinfo,
 	// Interaction commands
 	cute, about, meow, purr, hug, boop, pat, nap, uwu,
 	// Fun commands
